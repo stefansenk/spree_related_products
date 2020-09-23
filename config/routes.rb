@@ -20,5 +20,11 @@ Spree::Core::Engine.add_routes do
         end
       end
     end
+    namespace :v1 do
+      resources :products do
+        resources :relations
+      end
+      resources :relation_types
+    end
   end
 end
